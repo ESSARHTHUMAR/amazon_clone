@@ -1,0 +1,7 @@
+/* .select__box{
+    border: 1px solid;
+} */
+
+.select__box:hover{
+    border-color: yellow;
+}

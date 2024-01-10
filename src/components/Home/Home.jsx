@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import "./home.css";
 import Products from "./Products";
-import ImageSlider from "../../Carousel/imageSlider";
+import ImageSlider from "../../Carousel/ImageSlider"
 import images from "../../Carousel/images";
 import { ProductsContext } from "../../Context/ProductsContext";
 import Filter from "../Filter/Filter";

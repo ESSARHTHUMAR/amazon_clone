@@ -2,7 +2,6 @@ import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
 import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
-import CurrencyFormat from "react-currency-format";
 import { Link, useNavigate } from "react-router-dom";
 import { useStateValue } from "../../Context/StateProvider";
 import { basketTotal } from "../../Reducers/reducer";
@@ -90,20 +89,15 @@ function Checkout() {
             <form action="" onSubmit={handleSubmit}>
               <CardElement onChange={handleChange} />
               <div className="mt-[10px]">
-                <CurrencyFormat
-                  renderText={(value) => (
+                
+                  {
                     <>
                       <p>
-                        <strong>Order Total: {value}</strong>
+                        Order Total: <strong>${basketTotal(basket)}</strong>
                       </p>
                     </>
-                  )}
-                  decimalScale={2}
-                  value={basketTotal(basket)*80}
-                  displayType={"text"}
-                  thousandSeparator={true}
-                  prefix={"₹"}
-                />
+                  }
+                
                 <button className="w-[50%] font-titleFont font-bold h-[30px] border-2 border-solid  bg-yellow-400 cursor-pointer hover:bg-yellow-500 active:bg-yellow-700 rounded-sm mt-[10px]" disabled={disabled || proccessing || succeeded}>
                   <span>{proccessing ? <p>Processing</p> : "Buy Now"}</span>
                 </button>

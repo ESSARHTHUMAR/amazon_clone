@@ -41,7 +41,7 @@ function CartProducts({ id, title, price, image, isVisible }) {
             </p>
           </div>
           <p className="text-sm lg:text-md text-gray-600 font-semibold">
-            <strong>₹</strong> {price * 80}
+            <strong>$</strong> {price}
           </p>
           <button
             onClick={handleClick}

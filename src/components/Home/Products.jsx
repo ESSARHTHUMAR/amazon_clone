@@ -66,7 +66,7 @@ function Products({ product }) {
           </p>
           <div className="flex items-center justify-between mt-2">
             <p className="mx-5 text-sm text-gray-600 font-semibold">
-              <strong>₹</strong> {Math.round(price * 80, 2)}
+              <strong>$</strong> {Math.round(price, 2)}
             </p>
             <div className="products__rating flex mx-5 text-yellow-500">
               <StarIcon />

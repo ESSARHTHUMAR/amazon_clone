@@ -11,7 +11,7 @@ import { useStateValue } from "./Context/StateProvider";
 import Checkout from "./components/Checkout/Checkout";
 import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
-import { Footer } from "../src/Footer/Footer"
+import  Footer  from "../src/Footer/Footer"
 
 
 const promise = loadStripe(
